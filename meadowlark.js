@@ -19,10 +19,13 @@ app.get('/', function(req, res){
 	res.render('home');
 });
 
+
 // About Page
+
+const fortune = require('./lib/fortune.js');
+
 app.get('/about', function(req, res){
-	var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
-	res.render('about', {fortune: randomFortune});
+	res.render('about', {fortune: fortune.getFortune()});
 });
 
 // static (middleware)
@@ -51,12 +54,3 @@ app.listen(
 		app.get('port') +
 		'; press Ctrl-C to terminate.');
 	});
-
-
-var fortunes = [
-	"Conquer your fears or they will conquer you.",
-	"Rivers need springs.",
-	"Do not fear what you don't know.",
-	"You will have a pleasent surprise.",
-	"Whenever possible, keep it simple."
-]
