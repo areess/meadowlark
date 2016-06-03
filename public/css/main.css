@@ -1,0 +1,35 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.container img {
+	height: 300px;
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+}
+
+.container blockquote {
+	font-size: 32px;
+}
+
+.jumbotron .container h1 {
+	font-size: 52px;
+	margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
